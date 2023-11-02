@@ -1,0 +1,65 @@
+.header-page{
+    width: 100%;
+    height: 12vh;
+    background-color: #0d47a1;
+}
+
+.header-content {
+    height: 12vh;
+    margin: 0 5vw 0 5vw;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    width: 180px;
+    height: 70px;
+}
+
+.header-page ul {
+    color: #fff;
+    justify-content: center;
+    list-style-type: none;
+    display: flex;
+    margin-right: 10px;
+}
+
+.header-page ul li {
+    margin-right: 20px;
+}
+
+.header-page ul li:nth-child(3) {
+    margin-right: 0;
+}
+
+.login-time {
+    color: #fba524;
+}
+
+
+.logout-wrapper {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    
+}
+
+.logout-content{
+    padding-bottom: 5px;
+    color: #fff;
+}
+
+.icon-logout{
+    width: 20px;
+    height: 20px;
+    padding-top: 2px;
+}
+
+.icon-logout-wrap{
+    background-color: #0d47a1;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 1px;
+}

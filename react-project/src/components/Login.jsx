@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import aronlogo from '../image/aronlogo.jpg'
+import aronLogo from '../image/aronLogo.jpg'
+import '../components/Login.css'
 
 // 아이디 비밀번호 입력에 따른 경고창을 위한 테스트 데이터 (추후 삭제 예정)
 const User = {
@@ -66,15 +67,15 @@ const Login = () => {
     }, [idValid, pwValid]);
 
     return (
-    <div className='page'>
+    <div className='login-page'>
 
         <div className="logo-wrap">
-            <img className="logo-img" src={aronlogo} alt="로고자리" />
+            <img className="logo-img" src={aronLogo} alt="로고자리" />
         </div>
 
         <div className="content-wrap">
             <div className="input-wrap">
-                <input type="text" className='input' placeholder='ID' value={id} onChange={handleId}/>
+                <input type="text" className='input' placeholder='사번' value={id} onChange={handleId}/>
             </div>
             <div className="error-message-wrap">
                 {!idValid && id.length > 0 && (
@@ -82,7 +83,7 @@ const Login = () => {
                 )}
             </div>
             <div className="input-wrap">
-                <input type="password" className='input' placeholder='PASSWORD' value={pw} onChange={handlePw}/>
+                <input type="password" className='input' placeholder='비밀번호' value={pw} onChange={handlePw}/>
             </div>
             <div className="error-message-wrap">
                 {!pwValid && pw.length > 0 && (
