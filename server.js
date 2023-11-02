@@ -1,6 +1,8 @@
 const express = require('express');
 const path = require('path')
 const app = express();
+const userRouter = require('./routes/user')
+const indexRouter= require('./routes')
 
 // COPS 이슈 해결
 app.use(express.json());
@@ -9,8 +11,12 @@ app.use(cors());
 
 app.set('port', process.env.PORT || 3001);
 
+app.use('/', indexRouter)
+app.use('/user', userRouter)
+
+
 app.get('/', (req,res)=>{
-    res.send('아..')
+    res.send('환영합니다.')
 })
 
 
@@ -18,4 +24,5 @@ app.get('/', (req,res)=>{
 app.listen(app.get('port'), ()=>{
     console.log('port waiting')
 })
+
 
